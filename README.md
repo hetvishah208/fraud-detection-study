@@ -1,3 +1,13 @@
+---
+title: Fraud Cost Explorer
+emoji: 💳
+colorFrom: red
+colorTo: gray
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Fraud Detection: A Cost-Optimization Study
 
 Most fraud-detection projects stop at "I got 0.98 AUC." This one starts where
