@@ -22,7 +22,7 @@ COPY . .
 
 # Pre-compute artifacts at build time so the Space boots straight into the app.
 # Uses the synthetic sample if the real CSV isn't committed (it's large/gitignored).
-RUN python src/make_synthetic.py && python src/run_all.py
+RUN mkdir -p data outputs && python src/make_synthetic.py && python src/run_all.py
 
 EXPOSE 7860
 CMD ["streamlit", "run", "app/streamlit_app.py"]
