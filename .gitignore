@@ -11,3 +11,7 @@ venv/
 
 # os
 .DS_Store
+
+outputs/best_model.joblib
+outputs/experiment_scores.npz
+outputs/shap_beeswarm.png
