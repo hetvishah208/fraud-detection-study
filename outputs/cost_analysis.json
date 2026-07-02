@@ -1,0 +1,51 @@
+{
+  "best_strategy": "class_weight",
+  "optimal_threshold": 0.13139195979899498,
+  "min_cost": 5825.01,
+  "naive_cost": 6242.28,
+  "saving_vs_naive": 417.2699999999995,
+  "missed_fraud_at_optimal": 19,
+  "false_alarms_at_optimal": 14,
+  "sensitivity": [
+    {
+      "fn_cost_mult": 0.5,
+      "optimal_threshold": 0.13139195979899498,
+      "min_cost": 4875.01,
+      "missed_fraud": 19,
+      "false_alarms": 14
+    },
+    {
+      "fn_cost_mult": 1.0,
+      "optimal_threshold": 0.13139195979899498,
+      "min_cost": 5825.01,
+      "missed_fraud": 19,
+      "false_alarms": 14
+    },
+    {
+      "fn_cost_mult": 2.0,
+      "optimal_threshold": 0.011030150753768845,
+      "min_cost": 7674.79,
+      "missed_fraud": 17,
+      "false_alarms": 50
+    },
+    {
+      "fn_cost_mult": 4.0,
+      "optimal_threshold": 0.001,
+      "min_cost": 10578.55,
+      "missed_fraud": 13,
+      "false_alarms": 278
+    },
+    {
+      "fn_cost_mult": 8.0,
+      "optimal_threshold": 0.001,
+      "min_cost": 15778.55,
+      "missed_fraud": 13,
+      "false_alarms": 278
+    }
+  ],
+  "cost_assumptions": {
+    "false_negative_fixed": 100.0,
+    "false_positive": 10.0,
+    "false_negative_also_includes": "transaction Amount"
+  }
+}
