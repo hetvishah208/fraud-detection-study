@@ -146,11 +146,11 @@ with tab1:
     c1, c2 = st.columns(2)
     with c1:
         c_fn = st.slider("Cost of a MISSED fraud ($, fixed overhead)",
-                         0, 1000, 100, step=10,
+                         0, 1000, 100, step=10, key="fn_cost",
                          help="On top of the transaction amount you lose.")
     with c2:
         c_fp = st.slider("Cost of a FALSE ALARM ($)",
-                         0, 200, 10, step=5,
+                         0, 200, 10, step=5, key="fp_cost",
                          help="Operational + customer-friction cost of "
                               "flagging a legit transaction.")
 
@@ -172,8 +172,9 @@ with tab1:
         ax.axvline(t_opt, ls="--", color="#333", label=f"optimal {t_opt:.3f}")
         ax.axvline(0.5, ls=":", color="#999", label="naive 0.50")
         ax.set_xlabel("decision threshold"); ax.set_ylabel("total cost ($)")
+        ax.set_ylim(0, max(costs) * 1.15)
         ax.legend(fontsize=8)
-        fig.tight_layout(); st.pyplot(fig); plt.close(fig)
+        fig.tight_layout(); st.pyplot(fig, use_container_width=True); plt.close(fig)
     with g2:
         cm = pd.DataFrame([[tn, fp], [fn, tp]],
                           index=["Actual legit", "Actual fraud"],
